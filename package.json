@@ -1,0 +1,12 @@
+{
+  "name": "think-tree-utils",
+  "version": "1.0.0",
+  "description": "树结构数据处理工具，增删改查移动等。",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "author": "zhangyu",
+  "license": "ISC"
+}
