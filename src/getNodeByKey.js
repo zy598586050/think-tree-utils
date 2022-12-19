@@ -1,5 +1,5 @@
 // 根据某个属性获取节点
-const getNodeByKey = (key, tree, { keyName = 'id', childrenName = 'children' }) => {
+const getNodeByKey = (key, tree, { keyName = 'id', childrenName = 'children' } = {}) => {
     for (const node of tree) {
         if (node[keyName] === key) {
             return node

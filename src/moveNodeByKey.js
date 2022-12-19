@@ -1,6 +1,6 @@
 import getParentNodeByKey from './getParentNodeByKey.js'
 // 根据某个属性向上或向下移动
-const moveNodeByKey = (key, tree, type = 'up', num = 1, { keyName = 'id', childrenName = 'children' }) => {
+const moveNodeByKey = (key, tree, type = 'up', num = 1, { keyName = 'id', childrenName = 'children' } = {}) => {
     let parent = getParentNodeByKey(key, tree, { keyName, childrenName })
     if (parent === null) parent = tree
     const index = parent.findIndex(item => item[keyName] === key)

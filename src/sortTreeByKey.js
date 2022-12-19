@@ -1,5 +1,5 @@
 // 根据某个属性排序
-const sortTreeByKey = (tree, sort = 'desc', { keyName = 'id', childrenName = 'children' }) => {
+const sortTreeByKey = (tree, sort = 'desc', { keyName = 'id', childrenName = 'children' } = {}) => {
     tree.sort((a, b) => {
         if (sort === 'desc') {
             return b[keyName] - a[keyName]

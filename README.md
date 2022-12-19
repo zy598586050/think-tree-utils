@@ -51,7 +51,7 @@ npm install think-tree-utils
 
 ### 1. 数组转树结构 (buildTree)
 
-> 参数：(data, { parentId = null, idName = 'id', parentIdName = 'parentid', childrenName = 'children' })
+> 参数：(data, { parentId = null, idName = 'id', parentIdName = 'parentid', childrenName = 'children' } = {})
 
 ```
 const items = [
@@ -96,7 +96,7 @@ console.log('构建树结构', tree)
 
 ### 2. 根据某个属性获取节点 (getNodeByKey)
 
-> 参数：(key, tree, { keyName = 'id', childrenName = 'children' })
+> 参数：(key, tree, { keyName = 'id', childrenName = 'children' } = {})
 
 ```
 const node2 = TreeUtil.getNodeByKey(2, tree, { childrenName: 'child' })
@@ -105,7 +105,7 @@ console.log('ID为2的节点', node2)
 
 ### 3. 根据某个属性修改节点 (setNodeByKey)
 
-> 参数：(tree, newNode, { keyName = 'id', childrenName = 'children' })
+> 参数：(tree, newNode, { keyName = 'id', childrenName = 'children' } = {})
 
 ```
 TreeUtil.setNodeByKey(tree, { ...node2, name: '李达康' }, { childrenName: 'child' })
@@ -114,7 +114,7 @@ console.log('修改id=2的这个节点后的树', tree)
 
 ### 4. 根据某个属性删除节点 (delNodeByKey)
 
-> 参数：(key, tree, { keyName = 'id', childrenName = 'children' })
+> 参数：(key, tree, { keyName = 'id', childrenName = 'children' } = {})
 
 ```
 TreeUtil.delNodeByKey(3, tree, { childrenName: 'child' })
@@ -123,7 +123,7 @@ console.log('删除id=3的这个节点后的树', tree)
 
 ### 5. 根据某个属性排序 (sortTreeByKey)
 
-> 参数：(tree, sort = 'desc', { keyName = 'id', childrenName = 'children' })
+> 参数：(tree, sort = 'desc', { keyName = 'id', childrenName = 'children' } = {})
 
 ```
 TreeUtil.sortTreeByKey(tree, 'desc', { keyName: 'id', childrenName: 'child' })
@@ -132,7 +132,7 @@ console.log('根据id对数结构进行降序', tree)
 
 ### 6. 根据某个属性获取父节点 (getParentNodeByKey)
 
-> 参数：(key, tree, { keyName = 'id', childrenName = 'children' })
+> 参数：(key, tree, { keyName = 'id', childrenName = 'children' } = {})
 
 ```
 const node4 = TreeUtil.getParentNodeByKey(4, tree, { childrenName: 'child' })
@@ -141,7 +141,7 @@ console.log('获取id=4的父节点', node4)
 
 ### 7. 插入节点在某节点之前或之后或子节点 (insertNode)
 
-> 参数：(key, tree, obj, type = 'before', { keyName = 'id', childrenName = 'children' })
+> 参数：(key, tree, obj, type = 'before', { keyName = 'id', childrenName = 'children' } = {})
 
 ```
 TreeUtil.insertNode(4, tree, {id: 8, parentid: 2, name: '老六'}, 'before', { childrenName: 'child' })
@@ -156,7 +156,7 @@ console.log('给id=4的节点插入子节点', tree)
 
 ### 8. 根据某个属性向上或向下移动 (moveNodeByKey)
 
-> 参数：(key, tree, type = 'up', num = 1, { keyName = 'id', childrenName = 'children' }) 
+> 参数：(key, tree, type = 'up', num = 1, { keyName = 'id', childrenName = 'children' } = {}) 
 
 ```
 TreeUtil.moveNodeByKey(6, tree, 'lower', 1, { childrenName: 'child' })

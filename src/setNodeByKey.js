@@ -1,5 +1,5 @@
 // 根据某个属性修改节点
-const setNodeByKey = (tree, newNode, { keyName = 'id', childrenName = 'children' }) => {
+const setNodeByKey = (tree, newNode, { keyName = 'id', childrenName = 'children' } = {}) => {
     for (let i = 0; i < tree.length; i++) {
         if (tree[i][keyName] === newNode[keyName]) {
             tree[i] = newNode
