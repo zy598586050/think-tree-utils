@@ -1,6 +1,6 @@
 {
   "name": "think-tree-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "树结构数据处理工具，增删改查移动等。",
   "keywords": [
     "think-tree-utils",
