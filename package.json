@@ -1,6 +1,6 @@
 {
   "name": "think-tree-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "树结构数据处理工具，增删改查移动等。",
   "keywords": [
     "think-tree-utils",
@@ -10,7 +10,6 @@
   ],
   "main": "dist/index.js",
   "type": "module",
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "npx tsc",
     "test": "node test/index.js"
