@@ -8,6 +8,7 @@ import getParentNodeByKey from './dist/getParentNodeByKey.js'
 import insertNode from './dist/insertNode.js'
 import moveNodeByKey from './dist/moveNodeByKey.js'
 import rewriteFields from './dist/rewriteFields.js'
+import getFieldPathByKey from './dist/getFieldPathByKey.js'
 
 // 导出所有方法
 export default {
@@ -20,5 +21,6 @@ export default {
     getParentNodeByKey,
     insertNode,
     moveNodeByKey,
-    rewriteFields
+    rewriteFields,
+    getFieldPathByKey
 }

@@ -89,3 +89,7 @@ const node6 = TreeUtil.rewriteFields(tree, (node) => {
 }, 'child')
 console.log('把字段name替换成nickname')
 console.dir(node6, { depth: null })
+
+const node7 = TreeUtil.getFieldPathByKey(10, tree, { childrenName: 'child' })
+console.log('获取id=10的字段路径')
+console.dir(node7, { depth: null })

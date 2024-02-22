@@ -1,0 +1,36 @@
+interface Node {
+    [key: string]: any;
+    children?: Node[];
+}
+
+interface TreeOptions {
+    keyName: string;
+    childrenName: string;
+}
+
+// 获取某个字段值所在的链路
+const getFieldPathByKey = (key: string, tree: Node[], { keyName = 'id', childrenName = 'children' }) => {
+    const search = (node: Node, path: string[] | number[]): string[] | number[] => {
+        if (node[keyName] === key) {
+            return [...path, node[keyName]]
+        }
+        if (node[childrenName]) {
+            for (const child of node[childrenName]) {
+                const resultPath = search(child, [...path, node[keyName]])
+                if (resultPath.length) {
+                    return resultPath
+                }
+            }
+        }
+        return []
+    }
+    for (const rootNode of tree) {
+        const result = search(rootNode, [])
+        if (result.length) {
+            return result
+        }
+    }
+    return []
+}
+
+export default getFieldPathByKey
