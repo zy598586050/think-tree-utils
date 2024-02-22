@@ -189,3 +189,12 @@ const node6 = TreeUtil.rewriteFields(tree, (node) => {
 }, 'child')
 console.log('把字段name替换成nickname', node6)
 ```
+
+### 11. 获取某个字段值所在的链路 (getFieldPathByKey)
+
+> 参数：(key: string, tree: Node[], { keyName = 'id', childrenName = 'children' })
+
+```
+const node7 = TreeUtil.getFieldPathByKey(10, tree, { childrenName: 'child' })
+console.log('获取id=10的字段路径', node7)
+```
