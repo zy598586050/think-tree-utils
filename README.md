@@ -30,9 +30,11 @@ Think-Tree-Utils 是一个 JavaScript 库，用于处理树结构的数据。它
 │   ├── delNodeByKey.ts          // 根据某个属性删除节点
 │   ├── getNodeByKey.ts          // 根据某个属性获取节点
 │   ├── getParentNodeByKey.ts    // 根据某个属性获取父节点
+│   ├── getTopNodeByKey.ts       // 根据某个属性获取顶级节点
 │   ├── insertNode.ts            // 插入节点在某节点之前或之后或子节点
 │   ├── moveNodeByKey.ts         // 根据某个属性向上或向下移动
 │   ├── setNodeByKey.ts          // 根据某个属性修改节点
+│   ├── rewriteFields.ts         // 遍历更新字段名
 │   └── sortTreeByKey.ts         // 根据某个属性排序
 ├── test
 │    └── index.js
