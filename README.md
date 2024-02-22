@@ -26,14 +26,14 @@ Think-Tree-Utils 是一个 JavaScript 库，用于处理树结构的数据。它
 ```
 .
 ├── src
-│   ├── buildTree.js             // 数组转树结构
-│   ├── delNodeByKey.js          // 根据某个属性删除节点
-│   ├── getNodeByKey.js          // 根据某个属性获取节点
-│   ├── getParentNodeByKey.js    // 根据某个属性获取父节点
-│   ├── insertNode.js            // 插入节点在某节点之前或之后或子节点
-│   ├── moveNodeByKey.js         // 根据某个属性向上或向下移动
-│   ├── setNodeByKey.js          // 根据某个属性修改节点
-│   └── sortTreeByKey.js         // 根据某个属性排序
+│   ├── buildTree.ts             // 数组转树结构
+│   ├── delNodeByKey.ts          // 根据某个属性删除节点
+│   ├── getNodeByKey.ts          // 根据某个属性获取节点
+│   ├── getParentNodeByKey.ts    // 根据某个属性获取父节点
+│   ├── insertNode.ts            // 插入节点在某节点之前或之后或子节点
+│   ├── moveNodeByKey.ts         // 根据某个属性向上或向下移动
+│   ├── setNodeByKey.ts          // 根据某个属性修改节点
+│   └── sortTreeByKey.ts         // 根据某个属性排序
 ├── test
 │    └── index.js
 ├── README.md
@@ -163,3 +163,26 @@ TreeUtil.moveNodeByKey(6, tree, 'lower', 1, { childrenName: 'child' })
 console.log('id=6的节点向下移动一位', tree)
 ```
 
+### 9. 根据某个属性获取顶级节点 (getTopNodeByKey)
+
+> 参数：(key, tree, { keyName = 'id', childrenName = 'children' } = {})
+
+```
+const node5 = TreeUtil.getTopNodeByKey(6, tree, { childrenName: 'child' })
+console.log('获取id=6的顶级节点', node5)
+```
+
+### 10. 遍历更新字段名 (rewriteFields)
+> 参数：(tree, transformFn, childrenName = 'children')
+
+```
+const node6 = TreeUtil.rewriteFields(tree, (node) => {
+    const newNode = {
+        ...node,
+        nickname: node.name
+    }
+    delete newNode.name
+    return newNode
+}, 'child')
+console.log('把字段name替换成nickname', node6)
+```

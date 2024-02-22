@@ -1,11 +1,13 @@
-import buildTree from './src/buildTree.js'
-import getNodeByKey from './src/getNodeByKey.js'
-import setNodeByKey from './src/setNodeByKey.js'
-import delNodeByKey from './src/delNodeByKey.js'
-import sortTreeByKey from './src/sortTreeByKey.js'
-import getParentNodeByKey from './src/getParentNodeByKey.js'
-import insertNode from './src/insertNode.js'
-import moveNodeByKey from './src/moveNodeByKey.js'
+import buildTree from './dist/buildTree.js'
+import getNodeByKey from './dist/getNodeByKey.js'
+import setNodeByKey from './dist/setNodeByKey.js'
+import delNodeByKey from './dist/delNodeByKey.js'
+import sortTreeByKey from './dist/sortTreeByKey.js'
+import getTopNodeByKey from './dist/getTopNodeByKey.js'
+import getParentNodeByKey from './dist/getParentNodeByKey.js'
+import insertNode from './dist/insertNode.js'
+import moveNodeByKey from './dist/moveNodeByKey.js'
+import rewriteFields from './dist/rewriteFields.js'
 
 // 导出所有方法
 export default {
@@ -14,7 +16,9 @@ export default {
     setNodeByKey,
     delNodeByKey,
     sortTreeByKey,
+    getTopNodeByKey,
     getParentNodeByKey,
     insertNode,
-    moveNodeByKey
+    moveNodeByKey,
+    rewriteFields
 }

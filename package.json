@@ -1,18 +1,23 @@
 {
   "name": "think-tree-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "树结构数据处理工具，增删改查移动等。",
   "keywords": [
     "think-tree-utils",
     "tree-utils",
     "tree",
-    "think-js-lib"
+    "think-ts-lib"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "npx tsc",
     "test": "node test/index.js"
   },
   "author": "zhangyu",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.3.3"
+  }
 }
