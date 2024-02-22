@@ -39,6 +39,7 @@ Think-Tree-Utils 是一个 JavaScript 库，用于处理树结构的数据。它
 ├── README.md
 ├── index.js
 ├── package.json
+├── tsconfig.json
 ```
 
 ## 安装
@@ -173,6 +174,7 @@ console.log('获取id=6的顶级节点', node5)
 ```
 
 ### 10. 遍历更新字段名 (rewriteFields)
+
 > 参数：(tree, transformFn, childrenName = 'children')
 
 ```
