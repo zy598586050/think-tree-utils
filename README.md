@@ -181,12 +181,11 @@ console.log('获取id=6的顶级节点', node5)
 
 ```
 const node6 = TreeUtil.rewriteFields(tree, (node) => {
-    const newNode = {
-        ...node,
-        nickname: node.name
+    const { name, ...rest } = node
+    return {
+        nickname: name,
+        ...rest
     }
-    delete newNode.name
-    return newNode
 }, 'child')
 console.log('把字段name替换成nickname', node6)
 ```
