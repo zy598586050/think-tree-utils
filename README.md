@@ -36,6 +36,7 @@ Think-Tree-Utils 是一个 JavaScript 库，用于处理树结构的数据。它
 │   ├── setNodeByKey.ts          // 根据某个属性修改节点
 │   ├── rewriteFields.ts         // 遍历更新字段名
 │   ├── getFieldPathByKey.ts     // 获取某个字段值所在的链路
+│   ├── searchTreeByKey.ts       // 根据某个属性模糊查询树结构
 │   └── sortTreeByKey.ts         // 根据某个属性排序
 ├── test
 │    └── index.js
@@ -198,4 +199,13 @@ console.log('把字段name替换成nickname', node6)
 ```
 const node7 = TreeUtil.getFieldPathByKey(10, tree, { childrenName: 'child' })
 console.log('获取id=10的字段路径', node7)
+```
+
+### 12. 根据某个属性模糊查询树结构 (searchTreeByKey)
+
+> 参数：(key, tree, { keyName = 'id', childrenName = 'children' } = {})
+
+```
+const node8 = TreeUtil.searchTreeByKey('六', node6, { keyName: 'nickname', childrenName: 'child' })
+console.log('模糊查询nickname里有六的节点，并得到新树', node8)
 ```

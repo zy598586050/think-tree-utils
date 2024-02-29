@@ -93,3 +93,7 @@ console.dir(node6, { depth: null })
 const node7 = TreeUtil.getFieldPathByKey(10, tree, { childrenName: 'child' })
 console.log('获取id=10的字段路径')
 console.dir(node7, { depth: null })
+
+const node8 = TreeUtil.searchTreeByKey('六', node6, { keyName: 'nickname', childrenName: 'child' })
+console.log('模糊查询nickname里有六的节点，并得到新树')
+console.dir(node8, { depth: null })

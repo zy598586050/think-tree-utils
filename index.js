@@ -9,6 +9,7 @@ import insertNode from './dist/insertNode.js'
 import moveNodeByKey from './dist/moveNodeByKey.js'
 import rewriteFields from './dist/rewriteFields.js'
 import getFieldPathByKey from './dist/getFieldPathByKey.js'
+import searchTreeByKey from './dist/searchTreeByKey.js'
 
 // 导出所有方法
 export default {
@@ -22,5 +23,6 @@ export default {
     insertNode,
     moveNodeByKey,
     rewriteFields,
-    getFieldPathByKey
+    getFieldPathByKey,
+    searchTreeByKey
 }
