@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300px" src="https://www.think-js.cn/icon.png">
+  <img width="300px" src="https://www.think-ts.cn/icon.png">
 </p>
 
 <p align="center">
